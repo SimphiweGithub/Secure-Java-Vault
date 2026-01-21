@@ -6,9 +6,9 @@ import javafx.collections.ObservableList;
 
 public class DatabaseHandler {
   
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/javapasswordmanagercreatorapp";
-    private static final String DB_USER = "root";
-    private static final String DB_PASSWORD = "Simphiwe1";
+    private static final String DB_URL = "databse url";
+    private static final String DB_USER = "databse user name";
+    private static final String DB_PASSWORD = "database aassword";
 
     public void savePasswordDetails(String password, String websiteName, String userName, String email) {
         try (Connection connector = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
@@ -33,6 +33,7 @@ public class DatabaseHandler {
             System.out.println("Oops, there is an issue: " + e.getMessage());
         }
     }
+        //locked down for now 
         public ObservableList<PasswordEntry> getAllFromDB() {
         // Initialize an ObservableList for the TableView
         ObservableList<PasswordEntry> passwords = FXCollections.observableArrayList();
